@@ -11,5 +11,18 @@
     {%else%}
     <h1>Hello world</h1>
     {% endif %}
+    <ul>
+      {%for order in orders%}
+      <li>
+        {% comment %} {{product.title}}= ${{product.unit_price}}
+        <ul>
+          <li>Inventory: {{product.inventory}}</li>
+          <li>Collection: {{product.collection_id}}</li>
+        </ul>
+        {% endcomment %} 
+        {{order.id}} -- {{order.customer.first_name}}
+      </li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
